@@ -6,7 +6,7 @@
 /*   By: amottier <amottier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 19:01:05 by amottier          #+#    #+#             */
-/*   Updated: 2017/07/25 19:47:53 by amottier         ###   ########.fr       */
+/*   Updated: 2017/07/25 21:07:02 by amottier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,43 @@ char 	**ft_malloc_tabchar(char **tab, int y, int x)
 	return (tab);
 }
 
+int get_line_nb(char *str)
+{
+	int line_nb;
+
+	line_nb = ft_atoi(str);
+	return (line_nb);
+}
+
+char get_open_char(char *str)
+{
+	int i;
+
+	i = 0;
+	while(str[i] <= '9' && str[i] >= '0')
+		i++;
+	return (str[i]);
+}
+
+char get_block_char(char *str)
+{
+	int i;
+
+	i = 0;
+	while(str[i] <= '9' && str[i] >= '0')
+		i++;
+	return (str[i + 1]);
+}
+
+char get_res_char(char *str)
+{
+	int i;
+
+	i = 0;
+	while(str[i] <= '9' && str[i] >= '0')
+		i++;
+	return (str[i + 2]);
+}
 
 int		**algo(char **tab, char open, char block)
 {
@@ -166,5 +203,11 @@ void	create_tab(char *str)
 	printf("x = %d, y = %d \n", x, y);
 	tab = ft_malloc_tabchar(tab, y, x);
 	tab = str_tabchar(str, tab);
+
+	printf("line_nb = %d\n", get_line_nb(str));
+	printf("open char = %c\n", get_open_char(str));
+	printf("block char = %c\n", get_block_char(str));
+	printf("resolve char = %c\n", get_res_char(str));
+	
 	// printf("x = %d, y = %d \n", x, y);
 }
