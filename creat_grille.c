@@ -6,12 +6,11 @@
 /*   By: amottier <amottier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 16:27:26 by macuguen          #+#    #+#             */
-/*   Updated: 2017/07/25 19:37:35 by amottier         ###   ########.fr       */
+/*   Updated: 2017/07/25 19:42:29 by amottier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
+
+#include "header.h"
 
 int	ft_strlen(char *str)
 {
