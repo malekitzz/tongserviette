@@ -6,7 +6,7 @@
 /*   By: amottier <amottier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 16:27:26 by macuguen          #+#    #+#             */
-/*   Updated: 2017/07/25 19:44:24 by amottier         ###   ########.fr       */
+/*   Updated: 2017/07/25 21:50:55 by ysalaun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,11 +92,11 @@ int main(int argc, char **argv)
   while (i < argc)
   {
     fd = get_id_file(argc, argv, &i);
-    // str = read_stdi(fd);
-    // ft_putstr(str);
+     str = read_stdi(fd);
+     ft_putstr(str);
     create_tab(read_stdi(fd));
-  	//if ((check_is_valide(str)) == 0)
-  	//    ft_putstr("error");
+  	if ((check_is_valid(str)) == 0)
+  	    ft_putstr("error");
   	close(fd);
     i++;
   }

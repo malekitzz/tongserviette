@@ -6,7 +6,7 @@
 /*   By: amottier <amottier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 19:11:49 by amottier          #+#    #+#             */
-/*   Updated: 2017/07/25 21:33:37 by ysalaun          ###   ########.fr       */
+/*   Updated: 2017/07/25 21:49:30 by ysalaun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <stdlib.h>
 
 
+int 	check_is_valid(char *str);
 void	valid_square(int **square, int x, int y);
 int		ft_atoi(char *str);
 int		ft_strlen(char *str);
