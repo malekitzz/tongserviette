@@ -6,7 +6,7 @@
 /*   By: amottier <amottier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 19:01:05 by amottier          #+#    #+#             */
-/*   Updated: 2017/07/25 21:07:02 by amottier         ###   ########.fr       */
+/*   Updated: 2017/07/25 21:32:52 by ysalaun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,7 +180,7 @@ int		**algo(char **tab, char open, char block)
 				tableau[i][j] = 0;
 			if(tab[i][j] != block || tab[i][j] != open || tab[i][j] != '\n')
 				return(0);
-			// manque sizecorner
+			valid_square(tableau, i, j);
 			j++;
 		}
 		i++;
@@ -203,6 +203,7 @@ void	create_tab(char *str)
 	printf("x = %d, y = %d \n", x, y);
 	tab = ft_malloc_tabchar(tab, y, x);
 	tab = str_tabchar(str, tab);
+	algo(tab, get_open_char(str), get_block_char(str));
 
 	printf("line_nb = %d\n", get_line_nb(str));
 	printf("open char = %c\n", get_open_char(str));

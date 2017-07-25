@@ -48,8 +48,3 @@ int count line(char *str)
   }
   return (j);
 }
-
-char **creat_double_tab(char *str)
-{
-
-}
