@@ -6,7 +6,7 @@
 /*   By: amottier <amottier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 19:01:05 by amottier          #+#    #+#             */
-/*   Updated: 2017/07/25 19:41:39 by amottier         ###   ########.fr       */
+/*   Updated: 2017/07/25 19:47:53 by amottier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,6 @@ int ft_atoi(char *str)
 		var = var * 10 + (str[i++] - '0');
 	return (var);
 }
-
-// int		ft_strlen(char *str)
-// {
-// 	int		i;
-
-// 	i = 0;
-// 	while (str[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
 
 int get_x(char *str)
 {
@@ -129,6 +119,41 @@ char 	**ft_malloc_tabchar(char **tab, int y, int x)
 		return (0);
 	return (tab);
 }
+
+
+int		**algo(char **tab, char open, char block)
+{
+	int i;
+	int j;
+	int size;
+	int **tableau;
+	int max;
+
+	max = 0;
+	size = 0;
+	i = 0;
+	while (tab[i])
+	{
+		j = 0;
+		while(tab[i][j])
+		{
+			if(tab[i][j] == open)
+				tableau[i][j] = 1;
+			if(tab[i][j] == block)
+				tableau[i][j] = 0;
+			if(tab[i][j] != block || tab[i][j] != open || tab[i][j] != '\n')
+				return(0);
+			// manque sizecorner
+			j++;
+		}
+		i++;
+	}
+	return (tableau);
+}
+
+
+
+
 
 void	create_tab(char *str)
 {
