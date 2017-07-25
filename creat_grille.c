@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   creat_grille.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macuguen <macuguen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amottier <amottier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 16:27:26 by macuguen          #+#    #+#             */
-/*   Updated: 2017/07/25 16:27:28 by macuguen         ###   ########.fr       */
+/*   Updated: 2017/07/25 19:37:35 by amottier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -93,13 +93,12 @@ int main(int argc, char **argv)
   while (i < argc)
   {
     fd = get_id_file(argc, argv, &i);
-    str = ft_putstr(read_stdi(fd);
-    i++;
-  if (check_is_valide(str) == 0)
-      ft_putstr('error');
-    creat_double_tab
+    str = read_stdi(fd);
+    ft_putstr(str);
+  //if ((check_is_valide(str)) == 0)
+  //    ft_putstr("error");
   close(fd);
-  i++;
+    i++;
   }
   return 0;
 }
