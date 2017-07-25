@@ -56,14 +56,14 @@ char	*ft_addloc(char *str, char *c)
 	return (new_str);
 }
 
-int   get_id_file(int ac, char **av)
+int   get_id_file(int ac, char **av, int *i)
 {
   int   fd;
 
   fd = 0;
   if (ac == 1)
     return (fd);
-  fd = open(av[1], O_RDONLY);
+  fd = open(av[*i], O_RDONLY);
     return (fd);
 }
 
@@ -86,10 +86,20 @@ char	*read_stdi(fd)
 int main(int argc, char **argv)
 {
   int fd;
+  char *str;
+  int i;
 
-  fd = get_id_file(argc, argv);
-  if (ft_putstr(read_stdi(fd) == NULL)
-      return (0);
+  i = 1;
+  while (i < argc)
+  {
+    fd = get_id_file(argc, argv, &i);
+    str = ft_putstr(read_stdi(fd);
+    i++;
+  if (check_is_valide(str) == 0)
+      ft_putstr('error');
+    creat_double_tab
   close(fd);
+  i++;
+  }
   return 0;
 }
